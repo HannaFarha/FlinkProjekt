@@ -225,15 +225,9 @@ window.onclick = function(event) {
 			  $result = $stmt4->setFetchMode(PDO::FETCH_ASSOC);
 			  //foreach für die geholte Daten 
 			foreach($stmt4 as $row2):
-		//json Daten zum array 
-			 
-			
-			
-			
 				
  ?>
 	 	
-<!--Preisliste zeigen,um Bearbeiten durchzuführen (edit) -->
 				<form method="post">
 				 <table  align=center  id="display2"  style="display:block" width=28% >
 						<!--Select alle Daten-->
@@ -288,10 +282,6 @@ window.onclick = function(event) {
 						</form>
 
 
-
-
-
-<!-- Preisliste für neue Produkt einzufügen -->
                 <form method="post">
                             <table  align=center id="display"  style="display:none" width=28% >
 						
@@ -385,10 +375,6 @@ window.onclick = function(event) {
 		</form>		
 		
 		
-		
-		
-		
-		
 		<table   maxlength="20" class="table table-bordered " style = " background-color:red: 3px solid black;font-family:arial, lucida console;">
 			<thead>
 			<tr>
@@ -400,11 +386,11 @@ window.onclick = function(event) {
 			</thead>		
 <?php
 		
-						 //alle Daten aus Datenbank holen 
-						$stmt5 =$db->prepare("SELECT id,until,FROM Bike ORDER BY id DESC"); 
+        //alle Daten aus Datenbank holen 
+	$stmt5 =$db->prepare("SELECT id,until,FROM Bike ORDER BY id DESC"); 
 					
-					$result5 = $stmt5->fetchAll();
-						foreach($result5 as $row2):
+	$result5 = $stmt5->fetchAll();
+  	foreach($result5 as $row2):
 ?>					
 										
 		<form method="post">
@@ -431,15 +417,8 @@ window.onclick = function(event) {
 ?>
 		
 		
-		
-		
-		
-		
-		
 
-		
-
-		<table   maxlength="20" class="table table-bordered " style = " background-color:red: 3px solid black;font-family:arial, lucida console;">
+<table   maxlength="20" class="table table-bordered " style = " background-color:red: 3px solid black;font-family:arial, lucida console;">
 			<thead>
 			<tr>
 	<!--  <th> ID </th>-->
@@ -453,11 +432,11 @@ window.onclick = function(event) {
 			</thead>		
 <?php
 		
-						 //alle Daten aus Datenbank holen 
-						$stmt =$db->prepare("SELECT id,Rider,Number,Time,until,Comment FROM Bike ORDER BY id DESC"); 
-						$stmt->execute();
+					 //alle Daten aus Datenbank holen 
+					$stmt =$db->prepare("SELECT id,Rider,Number,Time,until,Comment FROM Bike ORDER BY id DESC"); 
+					$stmt->execute();
 					$result = $stmt->fetchAll();
-						foreach($result as $row):
+					foreach($result as $row):
 ?>					
 										
 		<form method="post">
